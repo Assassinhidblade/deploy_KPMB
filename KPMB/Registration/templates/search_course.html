@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>KOLEJ PROFESIONAL MARA BERANANG</h1>
+    <H3>Search Course</H3>
+
+    <form action="search_course" method="get">
+        Enter Course: <input type="text" name="c_code">
+        <input type="submit" value="Search">
+    </form>
+
+    <br><br>
+    {% if data2 >= 1 %}
+        {% for value in data %}
+        Code: {{value.code}}
+        Description: {{value.description}}
+        {% endfor %}
+    {% else %}
+        <h2>Data does not exist</h2>
+    {% endif %}
+
+    <br>
+    <br><br><br>
+    <a href="/KPMB">Home</a>
+</body>
+</html>
